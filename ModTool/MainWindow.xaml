@@ -1,0 +1,49 @@
+﻿<Window 
+        Name="ParentWindow"
+        x:Class="ModTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dataObjects="clr-namespace:ModTool.Data.DataObjects"
+        xmlns:data="clr-namespace:ModTool.Data"
+        xmlns:pages="clr-namespace:ModTool.Pages"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Window.CommandBindings />
+    <Window.Resources>
+        <data:FormListCharacterConverter x:Key="characterDataListConverter" />
+        <data:FormListLocationConverter x:Key="locationDataListConverter" />
+    </Window.Resources>
+    <DockPanel >
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Command="Close"/>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Command="Cut" />
+                <MenuItem Command="Copy" />
+                <MenuItem Command="Paste" />
+            </MenuItem>
+            <MenuItem Header="_Collection">
+                <MenuItem Command="Cut" />
+                <MenuItem Command="Copy" />
+                <MenuItem Command="Paste" />
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <Label Content="StatusTest"/>
+        </StatusBar>
+        <TabControl>
+            <TabItem Header="Characters">
+                <pages:BaseDataPage FormData="{Binding Path= DataLib.Characters, ElementName=ParentWindow, Converter={StaticResource characterDataListConverter}, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                                    FormDataType="{x:Type dataObjects:CharacterData}"></pages:BaseDataPage>
+            </TabItem>
+            <TabItem Header="Location">
+                <pages:BaseDataPage FormData="{Binding Path= DataLib.Locations, ElementName=ParentWindow, Converter={StaticResource locationDataListConverter}, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                    FormDataType="{x:Type dataObjects:LocationData}"></pages:BaseDataPage>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>

@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:data="clr-namespace:ModTool.Data"
+                    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+                    xmlns:selectors="clr-namespace:ModTool.Data.Selectors"
+>
+    <selectors:BaseDataTypeFieldEditorSelector x:Key="FieldEditorSelector" />
+
+    <DataTemplate x:Key="ListBoxItem">
+        <TextBlock Text="{Binding Path=EntityName}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="FieldContentString" >
+        <TextBox Text="{Binding Path=PropertyValue}" />
+    </DataTemplate>
+
+
+    <DataTemplate x:Key="FieldContentBool">
+        <CheckBox IsChecked="{Binding Path=PropertyValue}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="FieldContentInt">
+        <xctk:IntegerUpDown Text="{Binding Path=PropertyValue}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="RichTextContentTemplate">
+        <xctk:RichTextBox Text="{Binding Path=PropertyValue}"
+                          VerticalScrollBarVisibility="Visible"
+                          SpellCheck.IsEnabled="True"
+        >
+            <xctk:RichTextBox.TextFormatter>
+                <xctk:PlainTextFormatter />
+            </xctk:RichTextBox.TextFormatter>
+        </xctk:RichTextBox>
+    </DataTemplate>
+
+    <DataTemplate x:Key="FormDataItem">
+        <Grid ToolTip="{Binding FormBindData.ToolTipText}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="{Binding Path=FormBindData.LabelName}" />
+            <ContentControl Grid.Column="1" ContentTemplateSelector="{StaticResource FieldEditorSelector}" Content="{Binding }"/>
+        </Grid>
+    </DataTemplate>
+
+
+</ResourceDictionary>

@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="ModTool.Pages.BaseDataPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             DataContext="{Binding RelativeSource={RelativeSource Self } }">
+    <UserControl.Resources>
+        <ResourceDictionary Source="../FormLayoutTemplate.xaml"></ResourceDictionary>
+
+    </UserControl.Resources>
+    <Grid Background="#FFE5E5E5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button Content="+" Click="AddNewItem_Click"/>
+            <ListBox IsSynchronizedWithCurrentItem="True" 
+                     ItemsSource="{Binding Path=FormData }"
+                     SelectedItem="{Binding Path=FormData.SelectedItem}" 
+                     ItemTemplate="{StaticResource ListBoxItem}"
+                     SelectionMode="Single"
+                     ScrollViewer.VerticalScrollBarVisibility="Auto"
+            >
+
+            </ListBox>
+        </StackPanel>
+        <ItemsControl Grid.Column="1" 
+                      ItemsSource="{Binding Path=FormData.SelectedItem.GetFormBindings}"
+                      ItemTemplate="{StaticResource FormDataItem}"
+                      
+                      >
+            <ItemsControl.Resources>
+                <DataTemplate x:Key="FilePathSelectorTemplate">
+                    <StackPanel HorizontalAlignment="Stretch" Orientation="Horizontal">
+                        <TextBox HorizontalAlignment="Stretch" x:Name="FilePathText"  Text="{Binding Path=PropertyValue}" IsReadOnly="True"/>
+                        <Button Content="..." Click="FileBrowseButton_Click" x:Name="browseFileButton" />
+                        <Image Source="{Binding Path=PropertyValue}" MaxHeight="300" MaxWidth="300"></Image>
+                    </StackPanel>
+                </DataTemplate>
+
+			</ItemsControl.Resources>
+        </ItemsControl>
+    </Grid>
+</UserControl>

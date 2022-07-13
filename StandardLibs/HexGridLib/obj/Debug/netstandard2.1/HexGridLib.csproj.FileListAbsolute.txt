@@ -1,0 +1,15 @@
+F:\GameJams\HexGridLib\bin\Debug\netstandard2.1\HexGridLib.deps.json
+F:\GameJams\HexGridLib\bin\Debug\netstandard2.1\HexGridLib.dll
+F:\GameJams\HexGridLib\bin\Debug\netstandard2.1\HexGridLib.pdb
+F:\GameJams\HexGridLib\bin\Debug\netstandard2.1\UnityEngine.CoreModule.dll
+F:\GameJams\HexGridLib\bin\Debug\netstandard2.1\UnityEngine.SharedInternalsModule.dll
+F:\GameJams\HexGridLib\bin\Debug\netstandard2.1\UnityEngine.CoreModule.xml
+F:\GameJams\HexGridLib\bin\Debug\netstandard2.1\UnityEngine.SharedInternalsModule.xml
+F:\GameJams\HexGridLib\obj\Debug\netstandard2.1\HexGridLib.csproj.AssemblyReference.cache
+F:\GameJams\HexGridLib\obj\Debug\netstandard2.1\HexGridLib.GeneratedMSBuildEditorConfig.editorconfig
+F:\GameJams\HexGridLib\obj\Debug\netstandard2.1\HexGridLib.AssemblyInfoInputs.cache
+F:\GameJams\HexGridLib\obj\Debug\netstandard2.1\HexGridLib.AssemblyInfo.cs
+F:\GameJams\HexGridLib\obj\Debug\netstandard2.1\HexGridLib.csproj.CoreCompileInputs.cache
+F:\GameJams\HexGridLib\obj\Debug\netstandard2.1\HexGridLib.csproj.CopyComplete
+F:\GameJams\HexGridLib\obj\Debug\netstandard2.1\HexGridLib.dll
+F:\GameJams\HexGridLib\obj\Debug\netstandard2.1\HexGridLib.pdb

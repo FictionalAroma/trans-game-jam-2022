@@ -1,0 +1,12 @@
+F:\GameJams\BrainDefence\StandardLibs\DataLib\DataLib\bin\Debug\netstandard2.0\DataLib.deps.json
+F:\GameJams\BrainDefence\StandardLibs\DataLib\DataLib\bin\Debug\netstandard2.0\DataLib.dll
+F:\GameJams\BrainDefence\StandardLibs\DataLib\DataLib\bin\Debug\netstandard2.0\DataLib.pdb
+F:\GameJams\BrainDefence\StandardLibs\DataLib\DataLib\bin\Debug\netstandard2.0\Unity.Burst.Cecil.dll
+F:\GameJams\BrainDefence\StandardLibs\DataLib\DataLib\obj\Debug\netstandard2.0\DataLib.csproj.AssemblyReference.cache
+F:\GameJams\BrainDefence\StandardLibs\DataLib\DataLib\obj\Debug\netstandard2.0\DataLib.GeneratedMSBuildEditorConfig.editorconfig
+F:\GameJams\BrainDefence\StandardLibs\DataLib\DataLib\obj\Debug\netstandard2.0\DataLib.AssemblyInfoInputs.cache
+F:\GameJams\BrainDefence\StandardLibs\DataLib\DataLib\obj\Debug\netstandard2.0\DataLib.AssemblyInfo.cs
+F:\GameJams\BrainDefence\StandardLibs\DataLib\DataLib\obj\Debug\netstandard2.0\DataLib.csproj.CoreCompileInputs.cache
+F:\GameJams\BrainDefence\StandardLibs\DataLib\DataLib\obj\Debug\netstandard2.0\DataLib.csproj.CopyComplete
+F:\GameJams\BrainDefence\StandardLibs\DataLib\DataLib\obj\Debug\netstandard2.0\DataLib.dll
+F:\GameJams\BrainDefence\StandardLibs\DataLib\DataLib\obj\Debug\netstandard2.0\DataLib.pdb
