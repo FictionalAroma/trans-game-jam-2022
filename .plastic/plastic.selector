@@ -1,4 +1,0 @@
-repository "trans-game-jam@UnderTheBed@cloud"
-  path "/"
-    smartbranch "/main/mod-tool-dev"         
-     
