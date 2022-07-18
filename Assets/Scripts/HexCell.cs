@@ -38,13 +38,6 @@ namespace Assets.Scripts
             coordsText.text = Coords.ToString();
 
             var posVector3 = xIndex * new Vector3(1, 0,0) + yIndex * new Vector3(0.5f, 0,1f);
-
-            //if (Coords.Z % 2 == 0)
-            //{
-            //    // now adjust
-            //    posVector3.x += 0.5f;
-            //}
-
             this.transform.position = posVector3;
         }
         private static readonly float Sqrt3 = Mathf.Sqrt(3);
