@@ -19,7 +19,7 @@ namespace ModTool.Data
         private Guid _entityID = Guid.NewGuid();
 
         private string _entityName;
-        [FormBind("Lookup Name")]
+        [FormBind("Lookup Name", orderingIndex:-1)]
         public string EntityName
         {
             get => _entityName;
@@ -31,7 +31,10 @@ namespace ModTool.Data
         }
 
         [JsonIgnore]
-        public IEnumerable<FormBindAttributeWrapper> GetFormBindings => GetPropertiesWithAttribute<FormBindAttribute>().Select(info => new FormBindAttributeWrapper(info, this));
+        public IEnumerable<FormBindAttributeWrapper> GetFormBindings => GetPropertiesWithAttribute<FormBindAttribute>()
+            .Select(info => new FormBindAttributeWrapper(info, this))
+            .OrderBy(wrapper => wrapper.FormBindData.OrderingIndex);
+                                                                        //.ThenBy(wrapper => wrapper.FormBindData.LabelName);
 
         public IEnumerable<PropertyInfo> GetPropertiesWithAttribute<T>() where T : Attribute =>
             this.GetType().GetProperties().Where(info => info.CustomAttributes.Any(data => data.AttributeType ==  typeof(T)));

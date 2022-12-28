@@ -12,6 +12,7 @@ namespace ModTool.Attributes
         public string LabelName { get; }
 
         public string ToolTipText { get; }
+        public int OrderingIndex { get; }
 
         public ComponentType OverrideComponentType { get; }
 
@@ -19,11 +20,14 @@ namespace ModTool.Attributes
 
         public FormBindAttribute( string labelName,
             string toolTipText = "",
+            int orderingIndex = 1,
             ComponentType componentType = ComponentType.NoAction,
+            Type lookupType = null,
             [CallerMemberName] string memberName = "")
         {
             LabelName = labelName;
             ToolTipText = toolTipText;
+            OrderingIndex = orderingIndex;
             OverrideComponentType = componentType;
             MemberName = memberName;
         }
@@ -33,6 +37,8 @@ namespace ModTool.Attributes
     {
         NoAction,
         ImageFilePath,
-        RichText
+        RichText,
+        MultiItemFreeEntry,
+        MultiSelectSetList,
     }
 }

@@ -5,14 +5,6 @@ namespace HexGridLib
 {
     public struct HexCoords
     {
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                return (X * 397) ^ Z;
-            }
-        }
-
         public int X;
 
         /// <summary>
@@ -93,5 +85,14 @@ namespace HexGridLib
         }
 
         #endregion
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return (X * 397) ^ Z;
+            }
+        }
+
     }
 }
